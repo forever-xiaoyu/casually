@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[清除掉那些顽固文件]]></title>
-    <url>%2F2017%2F06%2F23%2F%E6%B8%85%E9%99%A4%E9%A1%BD%E5%9B%BA%E6%96%87%E4%BB%B6%2F</url>
+    <url>%2Fcasually%2F2017%2F06%2F23%2F%E6%B8%85%E9%99%A4%E9%A1%BD%E5%9B%BA%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[日常计算机使用过程中，有些时候会碰到一些顽固的文件无法删除的情况，不妨使用如下方式进行尝试。 创建一个任意名称的 bat 脚本，写入如下代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243REM QBFC Project Options BeginREM HasVersionInfo: YesREM Companyname:REM Productname: 顽固目录删除器REM Filedescription: 顽固目录删除器REM Copyrights:REM Trademarks: 顽固目录删除器REM Originalname: 顽固目录删除器REM Comments:REM Productversion: 20.10.05.08REM Fileversion: 20.10.05.08REM Internalname: 顽固目录删除器REM Appicon: C:\Documents and Settings\Administrator\桌面\uninstall.icoREM QBFC Project Options Endtitle 顽固目录删除器mode con: cols=70 lines=17@echo off:startclscolor 2fecho.echo.echo.echo 专门快速删除那种不能打开、不能进入、不能删除的顽固目录。echo.echo 注意：删除目录将同时删除其子目录中所有数据！echo.echo.set Choice=echo 请将要删除的顽固目录直接拖入本窗口，然后回车:echo.set /p Choice=if &quot;&quot;%Choice%&quot;&quot; == &quot;&quot; goto startDEL /F /A /Q \\?\&quot;&quot;%Choice%&quot;&quot;RD /S /Q \\?\&quot;&quot;%Choice%&quot;&quot;echo.clsecho.echo.echo.echo 删除完成! 请按任意键返回主目录!pause&gt;nulgoto :start 运行该脚本，将顽固文件拖拽到此脚本中会自动执行强制删除操作]]></content>
       <categories>
         <category>实用百科</category>
