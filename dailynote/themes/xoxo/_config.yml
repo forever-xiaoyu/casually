@@ -1,0 +1,38 @@
+
+# html lang
+language: zh-Hans
+
+# Custom Config
+menu:
+  home: /
+  archives: /archives
+  tags: /tags
+  search: /search
+  about: https://0xff000000.com
+  rss: /atom.xml
+
+search:
+  path: search.xml
+  field: post
+
+#RSS feed https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content_limit: 140
+
+
+sitemap:
+  path: sitemap.xml
+
+disqus_shortname: XXX
+
+google_analytics: XXX
+baidu_analytics: FuckUBaidu
+
+#footer
+index_page: https://blog.0xff000000.com
+main_site: https://0xff000000.com
+github: https://github.com/KevinOfNeu
