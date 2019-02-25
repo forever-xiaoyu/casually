@@ -8,12 +8,12 @@ subtitle: 随笔随写
 description: 随笔随写
 keywords: 随笔随写
 author: 于策
-language:
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.yc609.cn
+url: https://www.yc609.cn/casually
 root: /casually/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,7 +73,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Hexo-Theme-Life-master
+# theme: Hexo-Theme-Life-master
+theme: hexo-theme-material-canary
+# theme: hexo-theme-material-x-master
 
 # search
 search:
