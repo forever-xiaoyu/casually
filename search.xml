@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[隐藏掉所有图片]]></title>
-    <url>%2Fcasually%2F2019%2F02%2F26%2F%E9%9A%90%E8%97%8F%E6%8E%89%E6%89%80%E6%9C%89%E5%9B%BE%E7%89%87%2F</url>
+    <url>%2Fcasually%2F2019%2F02%2F27%2F%E9%9A%90%E8%97%8F%E6%8E%89%E6%89%80%E6%9C%89%E5%9B%BE%E7%89%87%2F</url>
     <content type="text"><![CDATA[在浏览网站时，有很多图片看着眼烦，只想浏览纯文字，所以可以使用如下方式隐藏掉所有图片。 本代码可以在控制台执行，推荐使用油猴子插件执行1234var styleCSS = &apos;&lt;style&gt;img&#123;display: none !important;&#125;&lt;/style&gt;&apos;;var styleEle = document.createElement(&apos;div&apos;);styleEle.innerHTML = styleCSS;document.body.appendChild(styleEle);]]></content>
       <categories>
         <category>实用百科</category>
