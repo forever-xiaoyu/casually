@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>清除掉那些顽固文件</title>
-      <link href="/casually/2017/06/23/%E6%B8%85%E9%99%A4%E9%A1%BD%E5%9B%BA%E6%96%87%E4%BB%B6/"/>
-      <url>/casually/2017/06/23/%E6%B8%85%E9%99%A4%E9%A1%BD%E5%9B%BA%E6%96%87%E4%BB%B6/</url>
-      
-        <content type="html"><![CDATA[<pre><code>日常计算机使用过程中，有些时候会碰到一些顽固的文件无法删除的情况，不妨使用如下方式进行尝试。</code></pre><p>创建一个任意名称的 bat 脚本，写入如下代码：<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">REM QBFC Project Options Begin</span><br><span class="line">REM HasVersionInfo: Yes</span><br><span class="line">REM Companyname:</span><br><span class="line">REM Productname: 顽固目录删除器</span><br><span class="line">REM Filedescription: 顽固目录删除器</span><br><span class="line">REM Copyrights:</span><br><span class="line">REM Trademarks: 顽固目录删除器</span><br><span class="line">REM Originalname: 顽固目录删除器</span><br><span class="line">REM Comments:</span><br><span class="line">REM Productversion: 20.10.05.08</span><br><span class="line">REM Fileversion: 20.10.05.08</span><br><span class="line">REM Internalname: 顽固目录删除器</span><br><span class="line">REM Appicon: C:\Documents and Settings\Administrator\桌面\uninstall.ico</span><br><span class="line">REM QBFC Project Options End</span><br><span class="line">title 顽固目录删除器</span><br><span class="line">mode con: cols=70 lines=17</span><br><span class="line">@echo off</span><br><span class="line">:start</span><br><span class="line">cls</span><br><span class="line">color 2f</span><br><span class="line">echo.</span><br><span class="line">echo.</span><br><span class="line">echo.</span><br><span class="line">echo 专门快速删除那种不能打开、不能进入、不能删除的顽固目录。</span><br><span class="line">echo.</span><br><span class="line">echo 注意：删除目录将同时删除其子目录中所有数据！</span><br><span class="line">echo.</span><br><span class="line">echo.</span><br><span class="line">set Choice=</span><br><span class="line">echo 请将要删除的顽固目录直接拖入本窗口，然后回车:</span><br><span class="line">echo.</span><br><span class="line">set /p Choice=</span><br><span class="line">if &quot;&quot;%Choice%&quot;&quot; == &quot;&quot; goto start</span><br><span class="line">DEL /F /A /Q \\?\&quot;&quot;%Choice%&quot;&quot;</span><br><span class="line">RD /S /Q \\?\&quot;&quot;%Choice%&quot;&quot;</span><br><span class="line">echo.</span><br><span class="line">cls</span><br><span class="line">echo.</span><br><span class="line">echo.</span><br><span class="line">echo.</span><br><span class="line">echo 删除完成! 请按任意键返回主目录!</span><br><span class="line">pause&gt;nul</span><br><span class="line">goto :start</span><br></pre></td></tr></table></figure></p><p>运行该脚本，将顽固文件拖拽到此脚本中会自动执行强制删除操作</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[隐藏掉所有图片]]></title>
+    <url>%2Fcasually%2F2019%2F02%2F26%2F%E9%9A%90%E8%97%8F%E6%8E%89%E6%89%80%E6%9C%89%E5%9B%BE%E7%89%87%2F</url>
+    <content type="text"><![CDATA[在浏览网站时，有很多图片看着眼烦，只想浏览纯文字，所以可以使用如下方式隐藏掉所有图片。 本代码可以在控制台执行，推荐使用油猴子插件执行1234var styleCSS = &apos;&lt;style&gt;img&#123;display: none !important;&#125;&lt;/style&gt;&apos;;var styleEle = document.createElement(&apos;div&apos;);styleEle.innerHTML = styleCSS;document.body.appendChild(styleEle);]]></content>
       <categories>
-          
-          <category> 实用百科 </category>
-          
+        <category>实用百科</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 计算机 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>计算机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[清除掉那些顽固文件]]></title>
+    <url>%2Fcasually%2F2019%2F02%2F26%2F%E6%B8%85%E9%99%A4%E9%A1%BD%E5%9B%BA%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[日常计算机使用过程中，有些时候会碰到一些顽固的文件无法删除的情况，不妨使用如下方式进行尝试。 创建一个任意名称的 bat 脚本，写入如下代码：12345678910111213141516171819202122232425262728293031323334353637383940414243REM QBFC Project Options BeginREM HasVersionInfo: YesREM Companyname:REM Productname: 顽固目录删除器REM Filedescription: 顽固目录删除器REM Copyrights:REM Trademarks: 顽固目录删除器REM Originalname: 顽固目录删除器REM Comments:REM Productversion: 20.10.05.08REM Fileversion: 20.10.05.08REM Internalname: 顽固目录删除器REM Appicon: C:\Documents and Settings\Administrator\桌面\uninstall.icoREM QBFC Project Options Endtitle 顽固目录删除器mode con: cols=70 lines=17@echo off:startclscolor 2fecho.echo.echo.echo 专门快速删除那种不能打开、不能进入、不能删除的顽固目录。echo.echo 注意：删除目录将同时删除其子目录中所有数据！echo.echo.set Choice=echo 请将要删除的顽固目录直接拖入本窗口，然后回车:echo.set /p Choice=if &quot;&quot;%Choice%&quot;&quot; == &quot;&quot; goto startDEL /F /A /Q \\?\&quot;&quot;%Choice%&quot;&quot;RD /S /Q \\?\&quot;&quot;%Choice%&quot;&quot;echo.clsecho.echo.echo.echo 删除完成! 请按任意键返回主目录!pause&gt;nulgoto :start 运行该脚本，将顽固文件拖拽到此脚本中会自动执行强制删除操作]]></content>
+      <categories>
+        <category>实用百科</category>
+      </categories>
+      <tags>
+        <tag>计算机</tag>
+      </tags>
+  </entry>
 </search>
