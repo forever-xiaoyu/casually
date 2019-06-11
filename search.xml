@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node.js 实现简单接口]]></title>
+    <url>%2Fcasually%2F2019%2F06%2F11%2Fnode-js-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E6%8E%A5%E5%8F%A3%2F</url>
+    <content type="text"><![CDATA[安装 node 并引入 http 模块1234567891011121314151617// 导入http模块:var http = require('http');// 创建http server，并传入回调函数:var server = http.createServer(function (request, response) &#123; // 回调函数接收request和response对象, // 获得HTTP请求的method和url: console.log(request.method + ': ' + request.url); // 将HTTP响应200写入response, 同时设置Content-Type: text/html: response.writeHead(200, &#123;'Content-Type': 'text/html'&#125;); // 将HTTP响应的HTML内容写入response: response.end('Hello world!');&#125;);// 让服务器监听8080端口:server.listen(8080);console.log('Server is running at http://127.0.0.1:8080/'); 运行 server.js1node server.js 打开 http://127.0.0.1:8080/如出现下图则表示服务已启用成功 路由在访问根路径时希望拿到当前目录的 index.html, 使用 request.url 进行判断即可。由于需要读取 index.html 文件，所以要用到 fs 读写模块123456789101112131415161718var http= require(&apos;http&apos;);var fs= require(&apos;fs&apos;);var server= http.createServer(function(request, response)&#123; var url = request.url; if(url === &apos;/&apos;)&#123; fs.readFile(&apos;./index.html&apos;, function(err, data)&#123; if(!err)&#123; response.writeHead(200, &#123;&quot;Content-Type&quot;: &quot;text/html;charset=UTF-8&quot;&#125;); response.end(data) &#125;else&#123; throw err; &#125; &#125;); &#125;else&#123; console.log(&quot;错误&quot;); &#125;&#125;);server.listen(8080, &apos;127.0.0.1&apos;); 新建 index.html写一个简单 ajax 请求1234567891011121314151617&lt;div id=&quot;box&quot;&gt;看不到看不到&lt;/div&gt;&lt;button onclick=&quot;success()&quot;&gt;我是按钮&lt;/button&gt;&lt;script&gt;function success()&#123; var http= new XMLHttpRequest(); http.onreadystatechange= function()&#123; if(http.status == 200 &amp;&amp; http.readyState == 4)&#123; var msg= http.responseText; var box= document.getElementById(&apos;box&apos;); box.innerHTML= JSON.parse(msg).name; &#125; &#125; //发送请求 http.open(&apos;GET&apos;, &apos;/data&apos;); http.send();&#125;&lt;/script&gt; 实现一个简单的接口这里使用 json 文件模拟数据库的读取操作，新建一个 data.json 文件，随意添加一些数据，然后在 server.js 中判断请求 url12345678910if(url === &apos;/data&apos;)&#123; fs.readFile(&apos;./data.json&apos;, function(err, data)&#123; if(!err)&#123; response.writeHead(200, &#123;&quot;Content-Type&quot;: &quot;application/json&quot;&#125;); response.end(data); &#125;else&#123; throw err; &#125; &#125;)&#125; 打开 http://127.0.0.1:8080/ 至此，一个简单的接口实现就完成了。]]></content>
+      <categories>
+        <category>服务器端</category>
+      </categories>
+      <tags>
+        <tag>软件开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[隐藏掉所有图片]]></title>
     <url>%2Fcasually%2F2019%2F02%2F27%2F%E9%9A%90%E8%97%8F%E6%8E%89%E6%89%80%E6%9C%89%E5%9B%BE%E7%89%87%2F</url>
     <content type="text"><![CDATA[在浏览网站时，有很多图片看着眼烦，只想浏览纯文字，所以可以使用如下方式隐藏掉所有图片。 本代码可以在控制台执行，推荐使用油猴子插件执行1234var styleCSS = &apos;&lt;style&gt;img&#123;display: none !important;&#125;&lt;/style&gt;&apos;;var styleEle = document.createElement(&apos;div&apos;);styleEle.innerHTML = styleCSS;document.body.appendChild(styleEle);]]></content>
